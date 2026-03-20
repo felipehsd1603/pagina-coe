@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: portal-produtos
+data:
+  PORT: "4000"
+  AUTH_MODE: "entra"
+  NODE_ENV: "production"

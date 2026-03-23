@@ -6,12 +6,13 @@ import Input from '@/components/ui/Input';
 import Select from '@/components/ui/Select';
 import Button from '@/components/ui/Button';
 import Badge from '@/components/ui/Badge';
+import { CLIENT_NAME, CLIENT_EMAIL_DOMAIN } from '@/config/client';
 
 const MOCK_DEMANDS: IDemand[] = [
   {
     id: 'd1b2c3d4-e5f6-7890-abcd-ef1234567801',
     requesterName: 'Carlos Eduardo Lima',
-    requesterEmail: 'carlos.lima@aegea.com.br',
+    requesterEmail: `carlos.lima@${CLIENT_EMAIL_DOMAIN}`,
     requesterUnit: 'Regional Norte',
     requesterArea: 'Operações',
     title: 'Automação de Leitura de Hidrômetros',
@@ -28,7 +29,7 @@ const MOCK_DEMANDS: IDemand[] = [
   {
     id: 'd1b2c3d4-e5f6-7890-abcd-ef1234567802',
     requesterName: 'Ana Paula Souza',
-    requesterEmail: 'ana.souza@aegea.com.br',
+    requesterEmail: `ana.souza@${CLIENT_EMAIL_DOMAIN}`,
     requesterUnit: 'Corporativo',
     requesterArea: 'Comercial',
     title: 'Dashboard de Perdas Comerciais',
@@ -45,7 +46,7 @@ const MOCK_DEMANDS: IDemand[] = [
   {
     id: 'd1b2c3d4-e5f6-7890-abcd-ef1234567803',
     requesterName: 'Marcos Vinícius Costa',
-    requesterEmail: 'marcos.costa@aegea.com.br',
+    requesterEmail: `marcos.costa@${CLIENT_EMAIL_DOMAIN}`,
     requesterUnit: 'Regional Sul',
     requesterArea: 'Tratamento de Água',
     title: 'App Controle de Reagentes',
@@ -62,12 +63,12 @@ const MOCK_DEMANDS: IDemand[] = [
   {
     id: 'd1b2c3d4-e5f6-7890-abcd-ef1234567804',
     requesterName: 'Juliana Ferreira',
-    requesterEmail: 'juliana.ferreira@aegea.com.br',
+    requesterEmail: `juliana.ferreira@${CLIENT_EMAIL_DOMAIN}`,
     requesterUnit: 'Corporativo',
     requesterArea: 'Recursos Humanos',
     title: 'Portal de Treinamentos',
     description:
-      'Portal centralizado para acesso a treinamentos internos, trilhas de aprendizagem e certificações da AEGEA.',
+      `Portal centralizado para acesso a treinamentos internos, trilhas de aprendizagem e certificações da ${CLIENT_NAME}.`,
     problemToSolve:
       'Treinamentos dispersos em múltiplas plataformas dificultam o acompanhamento e engajamento dos colaboradores.',
     estimatedUsers: 2500,
@@ -359,7 +360,7 @@ export default function DemandsCrud() {
               value={form.requesterEmail}
               onChange={(e) => setForm((prev) => ({ ...prev, requesterEmail: e.target.value }))}
               error={errors.requesterEmail}
-              placeholder="nome@aegea.com.br"
+              placeholder={`nome@${CLIENT_EMAIL_DOMAIN}`}
             />
           </div>
 

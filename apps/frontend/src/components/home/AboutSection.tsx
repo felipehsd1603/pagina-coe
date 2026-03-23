@@ -1,5 +1,6 @@
 import { Target, Award, Shield, Zap, Wrench, TrendingUp } from 'lucide-react';
 import Card from '@/components/ui/Card';
+import { CLIENT_NAME } from '@/config/client';
 
 const pillars = [
   {
@@ -42,7 +43,7 @@ export default function AboutSection() {
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Missao</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-              Promover a transformacao digital na AEGEA por meio de produtos digitais e automacoes
+              Promover a transformacao digital na {CLIENT_NAME} por meio de produtos digitais e automacoes
               que otimizam processos, reduzem custos operacionais e geram valor mensuravel para
               todas as regionais. Atuamos como facilitadores entre as areas de negocio e a
               tecnologia, garantindo solucoes alinhadas a estrategia corporativa.

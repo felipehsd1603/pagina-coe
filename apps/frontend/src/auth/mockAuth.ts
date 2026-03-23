@@ -1,4 +1,5 @@
 import type { UserRole } from '@portal/shared';
+import { CLIENT_EMAIL_DOMAIN } from '@/config/client';
 
 interface MockUser {
   id: string;
@@ -12,7 +13,7 @@ const MOCK_USERS: Record<string, { password: string; user: MockUser }> = {
     password: 'admin',
     user: {
       id: 'mock-admin-001',
-      email: 'admin@aegea.mock',
+      email: `admin@${CLIENT_EMAIL_DOMAIN}`,
       displayName: 'Admin CoE',
       role: 'ADMIN',
     },
@@ -21,7 +22,7 @@ const MOCK_USERS: Record<string, { password: string; user: MockUser }> = {
     password: 'editor',
     user: {
       id: 'mock-editor-001',
-      email: 'editor@aegea.mock',
+      email: `editor@${CLIENT_EMAIL_DOMAIN}`,
       displayName: 'Editor CoE',
       role: 'EDITOR',
     },
@@ -30,7 +31,7 @@ const MOCK_USERS: Record<string, { password: string; user: MockUser }> = {
     password: 'viewer',
     user: {
       id: 'mock-viewer-001',
-      email: 'viewer@aegea.mock',
+      email: `viewer@${CLIENT_EMAIL_DOMAIN}`,
       displayName: 'Viewer CoE',
       role: 'VIEWER',
     },

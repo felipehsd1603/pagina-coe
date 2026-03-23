@@ -5,6 +5,7 @@ import Input from '@/components/ui/Input';
 import Select from '@/components/ui/Select';
 import Button from '@/components/ui/Button';
 import { submitDemand } from '@/api/demands';
+import { CLIENT_EMAIL_DOMAIN } from '@/config/client';
 
 interface DemandFormModalProps {
   isOpen: boolean;
@@ -148,7 +149,7 @@ export default function DemandFormModal({ isOpen, onClose }: DemandFormModalProp
           <Input
             label="Email"
             type="email"
-            placeholder="seu.email@aegea.com.br"
+            placeholder={`seu.email@${CLIENT_EMAIL_DOMAIN}`}
             value={form.requesterEmail}
             onChange={(e) => updateField('requesterEmail', e.target.value)}
             error={errors.requesterEmail}

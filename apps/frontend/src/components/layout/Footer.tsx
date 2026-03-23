@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Mail } from 'lucide-react';
+import { CLIENT_NAME, CLIENT_SUPPORT_EMAIL } from '@/config/client';
 
 export default function Footer() {
   return (
@@ -15,7 +16,7 @@ export default function Footer() {
               <span className="font-semibold text-white">Produtos Digitais</span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
-              Portal de solucoes digitais e automacoes da AEGEA. Governanca, transparencia e
+              Portal de solucoes digitais e automacoes da {CLIENT_NAME}. Governanca, transparencia e
               eficiencia operacional atraves da Power Platform.
             </p>
           </div>
@@ -51,11 +52,11 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Contato</h3>
             <a
-              href="mailto:EficienciaAutomacao@aegea.com.br"
+              href={`mailto:${CLIENT_SUPPORT_EMAIL}`}
               className="inline-flex items-center gap-2 text-sm hover:text-white transition-colors"
             >
               <Mail className="w-4 h-4" />
-              EficienciaAutomacao@aegea.com.br
+              {CLIENT_SUPPORT_EMAIL}
             </a>
           </div>
         </div>
@@ -65,7 +66,7 @@ export default function Footer() {
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <p className="text-center text-xs text-gray-500">
-            &copy; 2026 AEGEA - Gerencia de Produtos Digitais e Automacoes
+            &copy; 2026 {CLIENT_NAME} - Gerencia de Produtos Digitais e Automacoes
           </p>
         </div>
       </div>

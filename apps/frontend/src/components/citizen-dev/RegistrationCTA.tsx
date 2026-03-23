@@ -1,5 +1,6 @@
 import { ArrowRight, Mail } from 'lucide-react';
 import Button from '@/components/ui/Button';
+import { CLIENT_SUPPORT_EMAIL } from '@/config/client';
 
 export default function RegistrationCTA() {
   return (
@@ -13,7 +14,7 @@ export default function RegistrationCTA() {
           O primeiro passo e aceitar o Termo de Uso e acessar o ambiente Sandbox.
         </p>
         <a
-          href="mailto:EficienciaAutomacao@aegea.com.br?subject=Interesse no Programa Citizen Developers"
+          href={`mailto:${CLIENT_SUPPORT_EMAIL}?subject=Interesse no Programa Citizen Developers`}
           className="inline-flex items-center gap-2 bg-white text-purple-900 font-semibold px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors"
         >
           <Mail className="w-5 h-5" />

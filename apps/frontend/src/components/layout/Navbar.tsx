@@ -4,6 +4,7 @@ import { Lock, Menu, X, LogOut, Sun, Moon } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { useTheme } from '@/contexts/ThemeContext';
 import GlobalSearch from '@/components/ui/GlobalSearch';
+import { CLIENT_NAME } from '@/config/client';
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -91,7 +92,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 flex-shrink-0" aria-label="Pagina inicial - AEGEA Produtos Digitais">
+          <Link to="/" className="flex items-center gap-3 flex-shrink-0" aria-label={`Pagina inicial - ${CLIENT_NAME} Produtos Digitais`}>
             <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
               <span className="text-white font-bold text-sm">AE</span>
             </div>

@@ -127,9 +127,10 @@ export default function DemandFormModal({ isOpen, onClose }: DemandFormModalProp
         <div
           className={`mb-4 p-3 rounded-lg text-sm font-medium ${
             toast.includes('sucesso')
-              ? 'bg-green-50 text-green-800 border border-green-200'
-              : 'bg-red-50 text-red-800 border border-red-200'
+              ? 'bg-green-50 dark:bg-green-900/30 text-green-800 dark:text-green-400 border border-green-200 dark:border-green-800'
+              : 'bg-red-50 dark:bg-red-900/30 text-red-800 dark:text-red-400 border border-red-200 dark:border-red-800'
           }`}
+          role="alert"
         >
           {toast}
         </div>
@@ -181,34 +182,34 @@ export default function DemandFormModal({ isOpen, onClose }: DemandFormModalProp
         />
 
         <div className="w-full">
-          <label className="block text-sm font-medium text-gray-700 mb-1">Descricao</label>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Descricao</label>
           <textarea
-            className={`w-full px-3 py-2 border rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors min-h-[100px] ${
-              errors.description ? 'border-red-500' : 'border-gray-300'
+            className={`w-full px-3 py-2 border rounded-lg shadow-sm placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors min-h-[100px] ${
+              errors.description ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
             }`}
             placeholder="Descreva a solucao desejada em detalhes"
             value={form.description}
             onChange={(e) => updateField('description', e.target.value)}
           />
           {errors.description && (
-            <p className="mt-1 text-sm text-red-600">{errors.description}</p>
+            <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.description}</p>
           )}
         </div>
 
         <div className="w-full">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
             Problema a Resolver
           </label>
           <textarea
-            className={`w-full px-3 py-2 border rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors min-h-[100px] ${
-              errors.problemToSolve ? 'border-red-500' : 'border-gray-300'
+            className={`w-full px-3 py-2 border rounded-lg shadow-sm placeholder-gray-400 dark:placeholder-gray-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors min-h-[100px] ${
+              errors.problemToSolve ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
             }`}
             placeholder="Qual problema ou dor este produto resolve?"
             value={form.problemToSolve}
             onChange={(e) => updateField('problemToSolve', e.target.value)}
           />
           {errors.problemToSolve && (
-            <p className="mt-1 text-sm text-red-600">{errors.problemToSolve}</p>
+            <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.problemToSolve}</p>
           )}
         </div>
 
@@ -221,11 +222,11 @@ export default function DemandFormModal({ isOpen, onClose }: DemandFormModalProp
         />
 
         {/* Excel template download */}
-        <div className="flex items-center gap-2 text-sm text-gray-500">
+        <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
           <Download className="w-4 h-4" />
           <a
             href="/templates/template-demanda.xlsx"
-            className="text-blue-600 hover:text-blue-800 underline"
+            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline"
             download
           >
             Baixar template Excel para demandas
@@ -233,7 +234,7 @@ export default function DemandFormModal({ isOpen, onClose }: DemandFormModalProp
         </div>
 
         {/* Action buttons */}
-        <div className="flex items-center justify-end gap-3 pt-4 border-t border-gray-200">
+        <div className="flex items-center justify-end gap-3 pt-4 border-t border-gray-200 dark:border-gray-700">
           <Button variant="secondary" type="button" onClick={handleClose}>
             Cancelar
           </Button>

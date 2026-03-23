@@ -32,8 +32,8 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-800 px-4">
-      <div className="w-full max-w-md bg-white rounded-xl shadow-2xl p-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 to-blue-800 dark:from-gray-900 dark:to-gray-950 px-4">
+      <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-8">
         {/* Logo */}
         <div className="flex justify-center mb-6">
           <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center">
@@ -41,14 +41,14 @@ export default function AdminLoginPage() {
           </div>
         </div>
 
-        <h1 className="text-center text-xl font-semibold text-gray-900 mb-2">
+        <h1 className="text-center text-xl font-semibold text-gray-900 dark:text-white mb-2">
           Acesso Administrativo
         </h1>
-        <p className="text-center text-sm text-gray-500 mb-8">
+        <p className="text-center text-sm text-gray-500 dark:text-gray-400 mb-8">
           Portal de Produtos Digitais e Automacoes
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-5" aria-label="Formulario de login">
           <Input
             label="Usuario"
             type="text"
@@ -56,6 +56,7 @@ export default function AdminLoginPage() {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
+            autoComplete="username"
           />
 
           <Input
@@ -65,10 +66,11 @@ export default function AdminLoginPage() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            autoComplete="current-password"
           />
 
           {error && (
-            <div className="bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg px-4 py-3">
+            <div className="bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-400 text-sm rounded-lg px-4 py-3" role="alert">
               {error}
             </div>
           )}

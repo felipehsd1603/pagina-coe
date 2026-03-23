@@ -1,10 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#2563eb"/>
-      <stop offset="100%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#021240"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#93c5fd" stop-opacity="0.3"/>
     </linearGradient>
   </defs>
-  <rect width="40" height="40" rx="8" fill="url(#bg)"/>
-  <text x="20" y="27" text-anchor="middle" fill="white" font-family="DM Sans, Inter, sans-serif" font-weight="700" font-size="18">AE</text>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <!-- Water wave decoration -->
+  <path d="M0 44 Q8 38 16 44 Q24 50 32 44 Q40 38 48 44 Q56 50 64 44 L64 64 L0 64 Z" fill="url(#wave)"/>
+  <!-- AE text -->
+  <text x="32" y="38" text-anchor="middle" fill="white" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="24" letter-spacing="1">AE</text>
 </svg>

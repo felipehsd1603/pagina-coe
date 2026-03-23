@@ -11,8 +11,10 @@ const AdminDashboardPage = lazy(() => import('@/pages/AdminDashboardPage'));
 
 function LoadingFallback() {
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="animate-spin rounded-full h-12 w-12 border-4 border-aegea-600 border-t-transparent" />
+    <div className="flex items-center justify-center min-h-screen bg-white dark:bg-gray-950">
+      <div className="animate-spin rounded-full h-12 w-12 border-4 border-aegea-600 border-t-transparent" role="status">
+        <span className="sr-only">Carregando...</span>
+      </div>
     </div>
   );
 }

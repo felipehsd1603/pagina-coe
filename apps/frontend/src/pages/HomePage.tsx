@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Hero from '@/components/home/Hero';
 import MetricsBar from '@/components/home/MetricsBar';
 import AboutSection from '@/components/home/AboutSection';
+import AppCarousel from '@/components/home/AppCarousel';
 import AppGrid from '@/components/home/AppGrid';
 import LifecycleExplainer from '@/components/home/LifecycleExplainer';
 import TestimonialsCarousel from '@/components/home/TestimonialsCarousel';
@@ -19,6 +20,7 @@ export default function HomePage() {
       <Hero onOpenDemand={openDemand} />
       <MetricsBar />
       <AboutSection />
+      <AppCarousel />
       <AppGrid />
       <LifecycleExplainer />
       <TestimonialsCarousel />

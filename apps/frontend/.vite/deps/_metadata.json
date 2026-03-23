@@ -1,0 +1,52 @@
+{
+  "hash": "ad5f0495",
+  "configHash": "d4cfe08d",
+  "lockfileHash": "f0e4fef9",
+  "browserHash": "e1a93d80",
+  "optimized": {
+    "react/jsx-dev-runtime": {
+      "src": "../../../../node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "ba489942",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "a6e92ccf",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "7c580109",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "f6408c86",
+      "needsInterop": false
+    },
+    "@tanstack/react-query": {
+      "src": "../../../../node_modules/@tanstack/react-query/build/modern/index.js",
+      "file": "@tanstack_react-query.js",
+      "fileHash": "d7faa8df",
+      "needsInterop": false
+    },
+    "sonner": {
+      "src": "../../../../node_modules/sonner/dist/index.mjs",
+      "file": "sonner.js",
+      "fileHash": "eb62a53a",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-FKYGCV7W": {
+      "file": "chunk-FKYGCV7W.js"
+    },
+    "chunk-4N5FT6WD": {
+      "file": "chunk-4N5FT6WD.js"
+    }
+  }
+}

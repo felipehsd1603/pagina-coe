@@ -2,13 +2,77 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide scrollbar for carousel */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 
+  /* Reduced motion preference */
+  html.reduce-motion,
+  html.reduce-motion * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Font size scaling */
+  html.font-normal {
+    font-size: 16px;
+  }
+  html.font-large {
+    font-size: 18px;
+  }
+  html.font-x-large {
+    font-size: 20px;
+  }
+
+  /* High contrast overrides */
+  html.high-contrast {
+    --hc-text: #000000;
+    --hc-bg: #ffffff;
+    --hc-border: #000000;
+  }
+  html.high-contrast.dark {
+    --hc-text: #ffffff;
+    --hc-bg: #000000;
+    --hc-border: #ffffff;
+  }
+  html.high-contrast body {
+    color: var(--hc-text) !important;
+  }
+  html.high-contrast p,
+  html.high-contrast span,
+  html.high-contrast a,
+  html.high-contrast h1,
+  html.high-contrast h2,
+  html.high-contrast h3,
+  html.high-contrast h4,
+  html.high-contrast label {
+    color: var(--hc-text) !important;
+  }
+  html.high-contrast img {
+    filter: contrast(1.3);
+  }
+
   body {
-    @apply font-sans;
+    @apply font-sans bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Focus visible for keyboard navigation */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-blue-500;
+  }
+
+  /* Skip-to-content link */
+  .skip-to-content {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-lg focus:font-semibold focus:shadow-lg;
   }
 }
 
@@ -22,18 +86,34 @@
   }
 
   .badge-green {
-    @apply bg-green-100 text-green-800;
+    @apply bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400;
   }
 
   .badge-yellow {
-    @apply bg-yellow-100 text-yellow-800;
+    @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400;
   }
 
   .badge-blue {
-    @apply bg-blue-100 text-blue-800;
+    @apply bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400;
   }
 
   .badge-purple {
-    @apply bg-purple-100 text-purple-800;
+    @apply bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400;
+  }
+
+  /* Animate-in for accessibility panel */
+  .animate-in {
+    animation: slide-up 0.2s ease-out;
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }

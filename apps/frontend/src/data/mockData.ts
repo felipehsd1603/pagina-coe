@@ -66,9 +66,10 @@ export const MOCK_APPS: IApp[] = [
     hasSensitiveData: false,
     isPublished: true,
     bannerUrl:
-      'https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?w=800&q=80',
+      'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80',
     iconUrl:
-      'https://images.unsplash.com/photo-1504309092620-4d0ec726efa4?w=100&q=80',
+      'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=100&q=80',
+    statusDate: 'Producao: 15/01',
   },
   {
     id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567802',
@@ -86,9 +87,10 @@ export const MOCK_APPS: IApp[] = [
     hasSensitiveData: false,
     isPublished: true,
     bannerUrl:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80',
     iconUrl:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&q=80',
+      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=100&q=80',
+    statusDate: 'Lancamento: 26/03',
   },
   {
     id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567803',
@@ -106,9 +108,10 @@ export const MOCK_APPS: IApp[] = [
     hasSensitiveData: false,
     isPublished: true,
     bannerUrl:
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80',
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
     iconUrl:
-      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=100&q=80',
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=100&q=80',
+    statusDate: 'Lancamento: 26/06',
   },
   {
     id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567804',
@@ -129,6 +132,7 @@ export const MOCK_APPS: IApp[] = [
       'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80',
     iconUrl:
       'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=100&q=80',
+    statusDate: 'Producao: 26/02',
   },
   {
     id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567805',
@@ -169,6 +173,7 @@ export const MOCK_APPS: IApp[] = [
       'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80',
     iconUrl:
       'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=100&q=80',
+    statusDate: 'Em Analise',
   },
   {
     id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567807',
@@ -186,9 +191,9 @@ export const MOCK_APPS: IApp[] = [
     hasSensitiveData: true,
     isPublished: true,
     bannerUrl:
-      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
+      'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=800&q=80',
     iconUrl:
-      'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=100&q=80',
+      'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=100&q=80',
   },
   {
     id: 'a1b2c3d4-e5f6-7890-abcd-ef1234567808',
@@ -206,9 +211,10 @@ export const MOCK_APPS: IApp[] = [
     hasSensitiveData: false,
     isPublished: true,
     bannerUrl:
-      'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
+      'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&q=80',
     iconUrl:
-      'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=100&q=80',
+      'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=100&q=80',
+    statusDate: 'Iniciativa: 10/03',
   },
 ];
 

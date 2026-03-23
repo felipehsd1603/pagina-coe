@@ -9,28 +9,29 @@ export default function AppTestimonials({ testimonials }: AppTestimonialsProps) 
   if (!testimonials.length) return null;
 
   return (
-    <section className="py-12 px-4">
+    <section className="py-12 px-4 bg-white dark:bg-gray-950">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Depoimentos</h2>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Depoimentos</h2>
         <div className="grid md:grid-cols-2 gap-6">
           {testimonials.map((t) => (
-            <div key={t.id} className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm">
-              <Quote className="w-8 h-8 text-aegea-200 mb-3" />
-              <p className="text-gray-700 italic mb-4">"{t.content}"</p>
+            <div key={t.id} className="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-xl p-6 shadow-sm">
+              <Quote className="w-8 h-8 text-aegea-200 dark:text-aegea-700 mb-3" aria-hidden="true" />
+              <p className="text-gray-700 dark:text-gray-300 italic mb-4">"{t.content}"</p>
               {t.rating && (
-                <div className="flex gap-0.5 mb-3">
+                <div className="flex gap-0.5 mb-3" aria-label={`Avaliacao: ${t.rating} de 5 estrelas`}>
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className={`w-4 h-4 ${i < t.rating! ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`}
+                      className={`w-4 h-4 ${i < t.rating! ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300 dark:text-gray-600'}`}
+                      aria-hidden="true"
                     />
                   ))}
                 </div>
               )}
               <div>
-                <p className="font-semibold text-gray-900">{t.authorName}</p>
-                <p className="text-sm text-gray-500">{t.authorRole}</p>
-                {t.authorUnit && <p className="text-sm text-gray-400">{t.authorUnit}</p>}
+                <p className="font-semibold text-gray-900 dark:text-white">{t.authorName}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{t.authorRole}</p>
+                {t.authorUnit && <p className="text-sm text-gray-400 dark:text-gray-500">{t.authorUnit}</p>}
               </div>
             </div>
           ))}

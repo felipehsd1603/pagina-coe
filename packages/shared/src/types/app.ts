@@ -53,6 +53,7 @@ export interface IApp {
   hasSensitiveData: boolean;
   iconUrl?: string;
   bannerUrl?: string;
+  statusDate?: string;
   isPublished: boolean;
 }
 

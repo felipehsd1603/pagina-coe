@@ -19,9 +19,9 @@ const COLOR_MAP: Record<string, { color: string; bg: string }> = {
 
 export default function MetricsBar() {
   return (
-    <section className="bg-white dark:bg-gray-950 py-12 md:py-16" aria-label="Metricas do CoE">
+    <section className="bg-white dark:bg-gray-950 py-6 md:py-8" aria-label="Metricas do CoE">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {MOCK_METRICS.map((metric) => {
             const iconKey = metric.icon || 'users';
             const Icon = ICON_MAP[iconKey] || Users;
@@ -33,18 +33,18 @@ export default function MetricsBar() {
             return (
               <Card
                 key={metric.id}
-                className="p-6 text-center border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="p-4 text-center border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all duration-300"
               >
                 <div
-                  className={`inline-flex items-center justify-center w-14 h-14 rounded-full ${colors.bg} ${colors.color} mb-4`}
+                  className={`inline-flex items-center justify-center w-10 h-10 rounded-full ${colors.bg} ${colors.color} mb-2`}
                   aria-hidden="true"
                 >
-                  <Icon className="w-7 h-7" />
+                  <Icon className="w-5 h-5" />
                 </div>
-                <div className="text-4xl font-extrabold text-gray-900 dark:text-white mb-1">
+                <div className="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white mb-0.5">
                   <AnimatedCounter value={displayValue} />
                 </div>
-                <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">{metric.label}</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">{metric.label}</p>
               </Card>
             );
           })}

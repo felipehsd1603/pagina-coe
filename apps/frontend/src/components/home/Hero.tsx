@@ -30,26 +30,26 @@ export default function Hero({ onOpenDemand }: HeroProps) {
       <div className="absolute bottom-10 right-20 w-96 h-96 bg-cyan-400/15 rounded-full blur-3xl" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12">
         <div className="text-center max-w-3xl mx-auto">
-          <span className="inline-flex items-center gap-1.5 mb-4 px-4 py-1.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-full border border-white/20">
-            <Sparkles className="w-3.5 h-3.5" />
+          <span className="inline-flex items-center gap-1.5 mb-3 px-3 py-1 bg-white/10 backdrop-blur-sm text-white text-xs font-medium rounded-full border border-white/20">
+            <Sparkles className="w-3 h-3" />
             Centro de Excelência em Produtos Digitais
           </span>
 
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 text-white">
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-3 text-white">
             Portal de Produtos Digitais e Automação
           </h1>
 
-          <p className="text-base md:text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-blue-100 mb-5 max-w-2xl mx-auto">
             Somos a Gerência de Produtos Digitais e Automações. Centralizamos todas as ferramentas
             desenvolvidas para impulsionar produtividade, escala e qualidade através da transformação digital.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2">
             <Button
               variant="secondary"
-              size="lg"
+              size="md"
               onClick={scrollToApps}
               className="w-full sm:w-auto"
             >
@@ -58,7 +58,7 @@ export default function Hero({ onOpenDemand }: HeroProps) {
 
             <Button
               variant="success"
-              size="lg"
+              size="md"
               onClick={onOpenDemand}
               className="w-full sm:w-auto"
             >
@@ -68,7 +68,7 @@ export default function Hero({ onOpenDemand }: HeroProps) {
 
             <Button
               variant="primary"
-              size="lg"
+              size="md"
               href="/citizen-developers"
               className="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 focus:ring-purple-500"
             >

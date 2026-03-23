@@ -30,23 +30,23 @@ export default function Hero({ onOpenDemand }: HeroProps) {
       <div className="absolute bottom-10 right-20 w-96 h-96 bg-cyan-400/15 rounded-full blur-3xl" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
         <div className="text-center max-w-3xl mx-auto">
-          <span className="inline-flex items-center gap-1.5 mb-6 px-4 py-2 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-full border border-white/20">
+          <span className="inline-flex items-center gap-1.5 mb-4 px-4 py-1.5 bg-white/10 backdrop-blur-sm text-white text-sm font-medium rounded-full border border-white/20">
             <Sparkles className="w-3.5 h-3.5" />
             Centro de Excelência em Produtos Digitais
           </span>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 text-white">
             Portal de Produtos Digitais e Automação
           </h1>
 
-          <p className="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
             Somos a Gerência de Produtos Digitais e Automações. Centralizamos todas as ferramentas
             desenvolvidas para impulsionar produtividade, escala e qualidade através da transformação digital.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button
               variant="secondary"
               size="lg"
